@@ -9,4 +9,4 @@ class PointSerializer(serializers.ModelSerializer):
 class LineSerializer(serializers.ModelSerializer):
     class Meta:
         model = Line
-        fields= ('id','name','p_origen','p_destino','shortes_path',)
+        fields= ('id','name','p_origen','p_destino','shortest_path',)
