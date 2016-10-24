@@ -7,3 +7,7 @@ http://stackoverflow.com/questions/5489618/django-filter-through-multiple-fields
 
 
 https://godjango.com/41-start-your-api-django-rest-framework-part-1/
+
+
+Documentacion API:
+https://github.com/marcgibbons/django-rest-swagger
