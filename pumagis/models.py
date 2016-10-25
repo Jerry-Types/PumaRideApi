@@ -3,10 +3,8 @@ import sys
 from qgis.core import *
 from qgis.networkanalysis import *
 import os
-
 import sys
 import socket
-
 import path_server
 
 def sendRequest(a_x, a_y, b_x, b_y):
