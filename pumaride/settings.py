@@ -26,16 +26,16 @@ SECRET_KEY = 'jwpkcrhasud=+868b9debkmk_)r=lt6-09mw&!6$bjjdpxmey)'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+"""
 REST_FRAMEWORK = {
     'VIEW_DESCRIPTION_FUNCTION': 'rest_framework_swagger.views.get_restructuredtext'
 }
-
 """
+
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
-"""
+
 # Application definition
 
 INSTALLED_APPS = [
