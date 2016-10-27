@@ -16,6 +16,7 @@ def sendRequest(a_x, a_y, b_x, b_y):
 
     path_server.replyWith(sock, message)
     reply = path_server.recieveMessage(sock)
+    print(reply)
 
     return(reply)
 
