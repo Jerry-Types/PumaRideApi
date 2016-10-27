@@ -21,29 +21,21 @@ def sendRequest(a_x, a_y, b_x, b_y):
 
 
 class Point(models.Model):
-	name= models.CharField(max_length=500)
 	lon=models.FloatField(default=0.0)
 	lat=models.FloatField(default=0.0)
 
 	class Meta:
 		verbose_name = "Point"
         verbose_name_plural = "Points"
-        
-	def __str__(self):
-		return self.name
 
 
 class Line(models.Model):
-	name= models.CharField(max_length=500)
 	p_origen=models.CharField(max_length=50,default="(0.0,0.0)")
 	p_destino=models.CharField(max_length=50,default="(0.0,0.0)")
 
 	class Meta:
 		verbose_name = "Line"
         verbose_name_plural = "Lines"
-        
-	def __str__(self):
-		return self.name
 
 	
 	@property

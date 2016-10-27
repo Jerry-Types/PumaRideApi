@@ -29,7 +29,7 @@ def points_list(request):
 @api_view(['GET','POST','DELETE'])
 def lines_list(request,p_ori,p_des):
 	if request.method=='GET':
-
+		generator=schemas.SchemaGenerator(title='Lines List')
 		#p_or=request.query_params.get('p_origen')
 		#p_des=request.query_params.get('p_destino')
 		#lines=Line.objects.filter(p_origen=p_or,p_destino=p_des)
@@ -45,16 +45,16 @@ def lines_list(request,p_ori,p_des):
 
 
 
-@api_view(['GET'])
+@api_view(['GET','POST'])
 def line(request):
 	if request.method=='GET':
 		print "GEEET"
 		Lines=Line.objects.all()
 		serializer=LineSerializer(Lines,many=True)
 		return Response(serializer.data)
-	"""elif request.method=='POST':
+	elif request.method=='POST':
 		serializer=LineSerializer(data=request.data)
 		if serializer.is_valid():
 			serializer.save()
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
-		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)"""
+		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -8,6 +8,6 @@ urlpatterns = [
     url(r'^points/$',points_list),
     #url(r'^lines/$',lines_list),
     url(r'^lines/$',line),
-    url(r'^lines/lines_search/(?P<p_ori>.*)/(?P<p_des>.*)$',lines_list),
-
+    #url(r'^lines/(?P<p_ori>.*)/(?P<p_des>.*)$',lines_list),
+    url(r'^lines/.*$',lines_list),
 ]
