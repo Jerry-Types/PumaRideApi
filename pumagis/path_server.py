@@ -121,7 +121,10 @@ def replyWith(sock, message):
             return
         sent = sent + part
 
-    sock.shutdown(1)
+    try:
+    	sock.shutdown(1)
+    except socket.error:
+	pass
 
 if __name__ == '__main__':
 
