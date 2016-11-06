@@ -16,4 +16,8 @@ def sendRequest(a_x, a_y, b_x, b_y):
 
     return(reply)
 
-print sendRequest(19.33, -99.18,22.07, -79.503862)
+# Agricola Oriental a IMASS
+print sendRequest(-99.1660,19.3585, -99.18, 19.33)
+
+# Calles de uno sentido
+print sendRequest(-99.186096,19.478058, -99.18697, 19.478362)

@@ -43,6 +43,12 @@ def lines_list(request,p_ori,p_des):
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
 		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET','POST'])
+def matches(request):
+	#matches = dict()
+	#serializer=MatchSerializer(lines,many=True)
+	#return Response(serializer.data)
+	return Response([{"name":"Brad", "path":"-99.146132,19.272014;-99.18043,19.560310", "match_percent":99, "start_time": "16:15"},{"name":"Arthur", "path":"-99.186096,19.478058;-99.18697,19.478362", "match_percent":80, "start_time":"16:05"}])
 
 
 @api_view(['GET','POST'])
