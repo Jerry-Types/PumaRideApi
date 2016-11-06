@@ -45,6 +45,8 @@ class Line(models.Model):
 		a_lon=float(self.p_origen.split(",")[1].split(")")[0])
 		b_lat=float(self.p_destino.split(",")[0].split("(")[1])
 		b_lon=float(self.p_destino.split(",")[1].split(")")[0])
-		print a_lat,a_lon,b_lat,b_lon
+		#print a_lat,a_lon,b_lat,b_lon
+		#print "HERE"
 		poly_line=sendRequest(a_lat,a_lon,b_lat,b_lon)
+		print poly_line
 		return poly_line		
